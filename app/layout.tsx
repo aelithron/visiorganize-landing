@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
+import { Suspense } from "react";
+import Majik from "./majik.module";
 import "./globals.css";
 
 import { config } from '@fortawesome/fontawesome-svg-core'
@@ -27,6 +29,7 @@ export default function RootLayout({
         className={`${montserrat.className} antialiased`}
       >
         {children}
+        <Suspense><Majik /></Suspense>
       </body>
     </html>
   );
