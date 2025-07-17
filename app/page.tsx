@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRocket } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faRocket } from "@fortawesome/free-solid-svg-icons";
 import logo from "@/public/logo.webp";
 import screenshot1 from "@/public/screenshots/1.webp";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 export default function Home() {
   return (
@@ -23,14 +24,21 @@ export default function Home() {
           <ol className="list-decimal list-inside text-left mt-4">
             <p>It works based on three simple concepts:</p>
             <li>Projects (meant to represent something you are building)</li>
-            <li>Folders (groups of resources in a project)</li>
             <li>Resources (objects related to a project, such as tasks or GitHub repos).</li>
+            <li>Tags (ways of grouping and organizing Resources)</li>
           </ol>
         </div>
         <div className="flex justify-center items-center">
           <Image src={screenshot1} alt="Visiorganize Logo" width={400} height={400} />
         </div>
       </div>
+    <div className="justify-center items-center text-center gap-2 bg-gradient-to-b from-[#b8a4c9] dark:from-[#1a2766] min-w-screen">
+      <h1 className="text-2xl font-semibold mt-2">What are you waiting for?</h1>
+      <div className="flex gap-2 mt-2 text-center justify-center items-center">
+        <a href="https://app.visi.axionspire.net" className="bg-violet-500 hover:text-sky-500 rounded-xl p-1 px-3"><FontAwesomeIcon icon={faArrowRight} /> Go to Visiorganize</a>
+        <a href="https://github.com/aelithron/visiorganize" className="bg-slate-500 hover:text-sky-500 rounded-xl p-1 px-3"><FontAwesomeIcon icon={faGithub} /> GitHub</a>
+      </div>
+    </div>
     </main>
   );
 }

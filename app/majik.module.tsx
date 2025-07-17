@@ -11,7 +11,7 @@ export default function Majik() {
   const [showMajik, setShowMajik] = useState(searchParams.has("majik") && searchParams.get("majik") !== "false");
   const [triggered, setTriggered] = useState(false);
   const [triggerCount, setTriggerCount] = useState(0);
-  useHotkeys('shift+backspace+m', () => setShowMajik(!showMajik), [showMajik])
+  useHotkeys('shift+backspace+t', () => setShowMajik(!showMajik), [showMajik])
 
   function handleClick() {
     setTriggered(true);
@@ -21,7 +21,11 @@ export default function Majik() {
         setTriggered(false);
       }, 2000);
     } else {
-      new Audio("https://neighborhood.hackclub.com/normal.mp3").play();
+      try {
+        new Audio("https://neighborhood.hackclub.com/normal.mp3").play();
+      } catch {
+        alert("i tried to load the majik but failed :cry:");
+      }
     }
   }
 
