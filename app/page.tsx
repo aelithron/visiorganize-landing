@@ -15,7 +15,7 @@ export default function Home() {
           <h1 className={`font-semibold text-3xl`}>Visiorganize</h1>
         </div>
         <p>The ultimate tool to organize software development work.</p>
-        <div className="mt-4"><Link href={"https://visi.axionspire.net"} className="bg-blue-500 hover:text-sky-500 p-2 rounded-3xl text-lg"><FontAwesomeIcon icon={faRocket} /> Launch</Link></div>
+        <div className="mt-4"><Link href={"https://app.visi.axionspire.net"} className="bg-blue-500 hover:text-sky-500 p-2 rounded-3xl text-lg"><FontAwesomeIcon icon={faRocket} /> Launch</Link></div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-2 md:grid-rows-1 bg-gradient-to-b from-[#f5ccd4] to-[#b8a4c9] dark:from-[#5C03BC] dark:to-[#1a2766] min-w-screen text-center p-8 md:px-20 place-content-center gap-4">
         <div>
